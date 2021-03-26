@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><title>퀴즈3</title>
+</head>
+<body>
+<script>
+    var ret = prompt("100 미만의 정수만 입력: ", "");
+    if(!isNaN(ret)){
+        if(ret >= 100) { 
+        alert("정수 " + ret+ "은 100 미만이 아닙니다.")
+        }
+        else if( ret > 0 && ret < 100) {
+	         var a = parseInt(ret);
+            var b = parseInt(0);
+            for(i =1; i <= a; i++){
+                b += i;
+            }
+            alert(b)
+        }
+    }
+    else{
+        if(ret == null) { 
+            alert("취소버튼을 누르셨거나, 다이얼로그가 닫혔습니다.")
+      }
+        else if(ret == "") {
+            alert("숫자를 입력하지 않았습니다.")
+        }
+        else{
+            alert("잘못된 입력입니다.")
+        }
+
+    }
+    
+    </script>
+</body>
+</html>
