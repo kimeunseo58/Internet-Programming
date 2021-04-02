@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        ran1 = parseInt(Math.random()*100 +1);
+        ran2 = parseInt(Math.random()*100 +1);
+        var n1 = ran1;
+        var n2 =ran2;
+        document.write(n1 + " + " + n2  + " = ");
+        function add(){
+            num = document.getElementById("user").value;
+           var a = parseInt(ran1) + parseInt(ran2);
+           if(num == ""){
+                alert("숫자를 입력해주세요");
+            }
+            if(num == a){ 
+               alert("정답입니다.");
+            }else{
+                alert("정답이 아닙니다.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>덧셈 계산 하시고, 결과를 입력하고 확인 버튼을 눌러 정확한지 확인해보세요.</p>
+        <hr>
+    <form>
+        
+        <br>
+        덧셈 결과 :  <input type="text" id="user" size="10">
+        <input type="button" id="btn" value="결과 확인" onclick="add();">
+        </form>
+
+</body>
+</html>
