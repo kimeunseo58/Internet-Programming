@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        ran = parseInt(Math.random()*100 +1);
+        count = 1;
+        function guess(){
+            num = document.getElementById("user").value;
+            if(num == ""){
+                alert("숫자를 입력해주세요");
+            }
+            if(num == ran){
+                document.getElementById("area").innerHTML="정답입니다.";
+            }else{
+                if(ran>num){
+                    document.getElementById("result").value = ("높습니다.");
+                }
+                else{
+                    document.getElementById("result").value = ("낮습니다.");
+                }
+            }
+            document.getElementById("guesses").value = (count++ + "회")
+        }
+    </script>
+</head>
+<body>
+    <h1>숫자 맞추기 게임</h1>
+    <p>이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다. 숫자는 1부터 100 사이입니다.</p>
+    <form>
+        숫자:<input type="text" id="user" size="5">
+		<input type="button" id="btn" value="확인" onclick="guess()">
+		<br>
+        추측횟수:
+		<input type="text" id="guesses" size="15">
+		힌트 : 
+		<input type="text" id="result" size="15">
+        </form>
+        <div id = "area"></div>
+</body>
+</html>
