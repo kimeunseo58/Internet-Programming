@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head><title>방문 시 시간에 따라 배경색 변경</title>    </head>
+    <body>
+        <p>오전이면 lightblue, 오후이면 orange 배경</p>
+    <hr>
+    <div id='clock1'></div>
+
+    <script>
+        function setClock() {
+            var now = new Date();
+            var s = now.getHours() + '시 ' + now.getMinutes() + '분 ' + now.getSeconds() + "초";
+            document.getElementById('clock1').innerHTML ="현재시간: " + s;
+            setTimeout('setClock()', 1000);
+            if(now.getHours() >12){
+                document.getElementById("clock1").style.background = "lightblue";
+
+            }
+            else{
+                document.getElementById("clock1").style.background = "orange";
+            }
+    
+        }
+        setClock();
+    </script>
+
+       
+</body>
+</html>
