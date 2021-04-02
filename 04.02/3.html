@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function add(){
+           var a = document.getElementById("a").value;
+           var b = document.getElementById("b").value;
+           document.getElementById("result").value = parseInt(a) + parseInt(b);
+        }
+    </script>
+</head>
+<body>
+    <h1>덧셈 계산기</h1>
+    <form>
+        첫번째 정수 :  <input type="text" id="a" size="10">
+        <br>
+        두번째 정수 :  <input type="text" id="b" size="10">   
+        <br>    
+		<input type="button" id="btn" value="계산" onclick="add();">
+        <br>
+        합계 :  <input type="text" id="result" size="10">
+        </form>
+
+</body>
+</html>
