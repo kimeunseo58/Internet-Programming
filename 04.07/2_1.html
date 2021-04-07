@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>난수 10개 생성</title>
+    </head>
+    <body>
+        <h1>난수 10개 생성</h1>
+        <hr>
+        <script>
+            var myarr = new Array();
+            var max;
+            function abc(a){
+                
+                for(var i =0; i<10; i++){
+                    var ran = parseInt(Math.random()*100 +1);
+                    a[i] = ran;
+                    document.write(ran);
+                    document.write("  ");
+                }
+            }
+           
+            abc(myarr)
+            document.write("<hr>")
+            myarr.sort((a,b) => a-b);
+            document.write("가장 큰 수는 " + myarr[9]);
+            document.write("<hr>")
+            for(var i =0; i<10; i++){
+                document.write(myarr[i] + "  ");
+            }
+           
+        </script>
+    </body>
+</html>
