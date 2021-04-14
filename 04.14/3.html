@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>select 객체에서 선택한 과일 출력</title>   
+        <script>
+            function myimage(){
+                var a = null;
+                var b = document.getElementById("fruit");
+                var img = document.getElementById("fruitIMG");
+                for(var i=0; i<b.length; i++){
+                    if(b[i].selected == true){
+                        a = b[i];
+                        break;
+                    }
+                }
+                img.src = a.value
+            }
+        </script>        
+    </head>
+<body onloda = "myimage()">
+    <h1>select 객체에서 선택한 과일 출력</h1>
+    <hr>
+    <p> 과일을 선택하면 이미지가 출력됩니다. </p> 
+    <form>
+    <select id = "fruit" onchange="myimage()">
+        <option value="https://imgnn.seoul.co.kr/img/upload/2017/04/30/SSI_20170430112606_V.jpg">바나나</option>
+        <option value="https://imagescdn.gettyimagesbank.com/500/18/202/334/0/1059632960.jpg">망고</option>
+        <option value="http://www.mkhealth.co.kr/news/photo/202010/50970_51164_4758.jpg">사과</option>
+    </select>
+    <img id = "fruitIMG" src = "https://imgnn.seoul.co.kr/img/upload/2017/04/30/SSI_20170430112606_V.jpg" alt ="">
+</form>
+</body>
+</html>
